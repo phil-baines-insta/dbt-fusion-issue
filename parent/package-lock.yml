@@ -1,0 +1,4 @@
+packages:
+- local: child
+  name: child
+sha1_hash: 6fa7e2507c807bc69c3630a949ff6486872e928e

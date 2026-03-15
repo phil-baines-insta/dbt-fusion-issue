@@ -1,0 +1,9 @@
+parent:
+  target: snowflake
+  outputs:
+    snowflake:
+      type: snowflake
+      account: sample
+      user: dbt
+      database: sample
+      schema: sample
