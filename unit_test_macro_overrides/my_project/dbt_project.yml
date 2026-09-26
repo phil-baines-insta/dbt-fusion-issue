@@ -1,0 +1,8 @@
+name: my_project
+version: '1.0.0'
+config-version: 2
+profile: repro
+
+models:
+  my_project:
+    +materialized: ephemeral

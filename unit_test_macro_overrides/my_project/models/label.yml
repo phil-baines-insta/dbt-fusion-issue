@@ -1,0 +1,30 @@
+version: 2
+
+unit_tests:
+  - name: same_project__no_override
+    model: label
+    given: []
+    expect:
+      rows:
+        - {result: local}
+
+  - name: same_project__override_called_macro
+    model: label
+    overrides:
+      macros:
+        my_project.is_ci: true
+    given: []
+    expect:
+      rows:
+        - {result: ci}
+
+  # pick_label never calls unused, so the result should be unaffected by this override.
+  - name: same_project__override_unrelated_macro
+    model: label
+    overrides:
+      macros:
+        my_project.unused: stubbed
+    given: []
+    expect:
+      rows:
+        - {result: local}
